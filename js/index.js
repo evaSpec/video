@@ -36,5 +36,5 @@ function play(url) {
 //找到点击播放视频按钮
 const playBtn = document.querySelector('.playBtn');
 playBtn.addEventListener('click',()=>{
-  play('../video.mp4');
+  play('https://interactive-examples.mdn.mozilla.net/media/examples/flower.webm');
 });
