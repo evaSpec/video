@@ -73,7 +73,7 @@ class VideoPlayer {
   //方法：播放视频并更换图标
   playVideoAndChangeIcon(element, iconPause, iconPlay) {
     const icon = element.querySelector('.iconfont');
-    //如果播放按钮上有play样式
+    //如果播放按钮加上了play的class
     if (icon.classList.contains('play')) {
       //播放按钮变成停止按钮，播放视频
       icon.classList.remove('play');
@@ -139,6 +139,16 @@ class VideoPlayer {
     //点击播放按钮播放视频
     this.$playButton.addEventListener('click', () => {
       this.playVideoAndChangeIcon(this.$playButton, icons.pause, icons.play);
+      const icon = this.$controlBtn.querySelector('.iconfont');
+      if(this.$audio.paused){
+        icon.classList.add('play');
+        icon.innerHTML = icons.bigPlay;
+        this.$controlBtn.style.display = 'block';
+      }else{
+        icon.classList.remove('play');
+        icon.innerHTML = icons.bigPause;
+        this.$controlBtn.style.display = 'none';
+      }
     });
     //点击音量按钮,静音
     this.$soundButton.addEventListener('click', () => {
@@ -274,6 +284,7 @@ class VideoPlayer {
       //点击屏幕，播放图标出现并视频暂停
       this.playVideoAndChangeIcon(this.$controlBtn, icons.bigPause, icons.bigPlay);
       this.$controlBtn.style.display = 'block';
+      this.playVideoAndChangeIcon(this.$controller,icons.pause,icons.play);
     });
     //点到控制条时
     this.$controller.addEventListener('click',(e) => {

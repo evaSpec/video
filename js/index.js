@@ -33,3 +33,8 @@ function play(url) {
     e.stopPropagation();
   });
 }
+//找到点击播放视频按钮
+const playBtn = document.querySelector('.playBtn');
+playBtn.addEventListener('click',()=>{
+  play('./video.mp4');
+});

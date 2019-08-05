@@ -10,6 +10,7 @@
   <title>视频</title>
 </head>
 <body>
+<button class="playBtn">点击播放视频</button>
 <div class="shadow hidden">  <!--  遮罩层-->
   <a class="close">x</a>  <!--关闭按钮，点击后视频和遮罩层一起关闭-->
   <div class="video-container"><!--放视频的容器-->
@@ -18,37 +19,37 @@
       <i class="iconfont v-bofang">&#xe608;</i>
     </div>
     <div class="controller"> <!--自己写的视频控件-->
-      <div class="play-button"> <!--暂停播放按钮-->
-        <i class="iconfont v-play">&#xe618;</i>
-      </div>
-      <div class="progress-box"><!--视频进度条父元素(拖拽进度条中用到)-->
-        <div class="progress-box__shadow"> </div><!--视频进度条遮罩层（拖拽进度条中用到）-->
-        <div class="progress-bar"> <!--视频进度条容器，也是视频进度条总长度-->
-          <div class="progress-bar__current"></div><!--视频进度条的当前进度-->
-          <div class="progress-bar__circle"></div><!--视频进度条上的小圆点-->
+        <div class="play-button"> <!--暂停播放按钮-->
+          <i class="iconfont v-play">&#xe618;</i>
         </div>
-      </div>
-      <div class="duration"> <!--视频时长-->
-        <div class="current-time">0:00</div>  <!--开始时间和当前播放时长-->
-        /
-        <div class="total-time"></div> <!--视频总时长，需要获取，用innerHTML写上去-->
-      </div>
-      <div class="sound"><!--视频音量-->
-        <div class="sound-button">
-          <i class="iconfont v-sound">&#xe662;</i><!--音量图标-->
-        </div>
-        <div class="sound-box"><!--和视频一样的结构，音量进度条盒子-->
-          <div class="sound-box__shadow"></div><!--音量进度条遮罩层-->
-          <div class="sound-bar"> <!--音量进度条-->
-            <div class="sound-bar__circle"></div> <!--当前音量进度条-->
-            <div class="sound-bar__current"></div> <!--音量进度条小圆点-->
+        <div class="progress-box"><!--视频进度条父元素(拖拽进度条中用到)-->
+          <div class="progress-box__shadow"> </div><!--视频进度条遮罩层（拖拽进度条中用到）-->
+          <div class="progress-bar"> <!--视频进度条容器，也是视频进度条总长度-->
+            <div class="progress-bar__current"></div><!--视频进度条的当前进度-->
+            <div class="progress-bar__circle"></div><!--视频进度条上的小圆点-->
           </div>
         </div>
+        <div class="duration"> <!--视频时长-->
+          <div class="current-time">0:00</div>  <!--开始时间和当前播放时长-->
+          /
+          <div class="total-time"></div> <!--视频总时长，需要获取，用innerHTML写上去-->
+        </div>
+        <div class="sound"><!--视频音量-->
+          <div class="sound-button">
+            <i class="iconfont v-sound">&#xe662;</i><!--音量图标-->
+          </div>
+          <div class="sound-box"><!--和视频一样的结构，音量进度条盒子-->
+            <div class="sound-box__shadow"></div><!--音量进度条遮罩层-->
+            <div class="sound-bar"> <!--音量进度条-->
+              <div class="sound-bar__circle"></div> <!--当前音量进度条-->
+              <div class="sound-bar__current"></div> <!--音量进度条小圆点-->
+            </div>
+          </div>
+        </div>
+        <div class="fullscreen"><!--全屏图标-->
+          <i class="iconfont v-fullscreen">&#xe7a6;</i>
+        </div>
       </div>
-      <div class="fullscreen"><!--全屏图标-->
-        <i class="iconfont v-fullscreen">&#xe7a6;</i>
-      </div>
-    </div>
   </div>
 </div>
 <script src="js/VideoPlayer.js"></script>
